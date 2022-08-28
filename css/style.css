@@ -1,0 +1,1285 @@
+/* ================   Start Variables   ========================== */
+:root {
+    --main-color: #009976;
+    --box-shadow-color :rgb(167, 161, 161);
+    --white-color:#fff;
+    --white-dark-color:rgb(218, 212, 212);
+    --footer-color:rgba(0, 153, 118, 0.75);
+    --head-color :#896B49;
+}
+
+/* ===============   End Variables    ================================ */
+
+/* ===============   Start Global Rules   ========================*/
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+    /* font-family: "Open Sans", sans-serif;
+    font-family: 'Akshar', sans-serif;
+    font-family: 'Merriweather', serif; */
+
+}
+/* =====================   end Global Rules   ====================================== */
+
+/*========================  start  Home   =================================*/
+header {
+    box-shadow: 1px 1px 6px 0px var(--box-shadow-color);
+    position:fixed;
+    top:0px;
+    width: 100%;
+    background: #fff;
+    z-index: 1000;
+    background-image: url("../img/inner-header.jpg");
+    background-size: cover;
+}
+/* ========================  Start Navbar   =========================== */
+
+.navbar-toggler {
+    width: 150px;
+    border:none;
+
+    height: 150px;
+}
+.navbar-toggler img {
+    width:100%;
+}
+nav ul {
+    
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content:space-around;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 400;
+
+}
+nav ul li {
+    position: relative;
+}
+nav ul li .active{
+   color: var(--main-color) !important;
+}
+nav ul li .active span::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0px !important;
+    background-color: var(--main-color);
+    width: 100%;
+    height: 2px;
+}
+nav ul li a span::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0px !important;
+    background-color: var(--main-color);
+    width: 0;
+    height: 2px;
+    transition: width 0.35s ease 0s;
+}
+nav ul li a span:hover::before{
+    width: 100%;
+}
+nav ul li a span:hover{
+    color:  var(--main-color) !important;
+}
+
+nav ul li a img {
+    width: 80px !important;
+}
+.header_home{
+    background-image: none;
+    background: none;
+    box-shadow: 0 0 0 0 ;
+}
+.header_home nav ul li a img {
+    width: 170px !important;
+}
+/* ========================   End Navbar   =========================== */
+
+/* ========================   Start Main =========================*/
+
+
+
+.main_carousel {
+    overflow: hidden;
+    height: 95vh;
+    position: relative;
+}
+  .imgBannerA ,.imgBannerB ,.imgBannerC{
+    position: relative;
+  }
+  .imgBannerA img ,.imgBannerB img ,.imgBannerC img{
+    height: 95vh;
+  }
+  .textBannerA ,.textBannerB ,.textBannerC{
+    position: absolute;
+     left:7rem;
+     top: 15rem;
+  }
+
+  .textBannerA h2 ,.textBannerB h2 ,.textBannerC h2 {
+    color:  var(--main-color) !important;
+    font-size: 2.7rem !important;
+    font-weight: 900 !important;
+  }
+
+  .main_carousel_button_top{
+    position: absolute;
+    top: 40vh;
+    right: 40px;
+    border:1px solid var(--head-color);
+    border-radius: 50%;
+    padding:20px;
+    font-size:30px;
+    color: var(--head-color);
+    transform:rotate(90deg)
+  }
+  .main_carousel_button_top button {
+    border:none;
+    background: none;
+    color: var(--head-color);
+
+  }
+
+  
+  .main_carousel_button_bottom{
+    position: absolute;
+    top: 55vh;
+    right: 40px;
+    border:1px solid var(--head-color);
+    background: none;
+    font-size:30px;
+    color: var(--head-color);
+    border-radius: 50%;
+    padding:20px;
+    transform:rotate(-90deg)
+
+  }
+  .main_carousel_button_bottom button {
+    border:none;
+    background:none;
+  }
+  
+/* ========================   end Main ==============================*/
+
+
+/* ==========================   start Mediterraneo ==================== */
+.scroll {
+    position: absolute;
+    top: -40px;
+    z-index: 50px;
+    margin-left: 48%;
+  }
+.Mediterraneo {
+    position: relative;
+    padding: 100px 0px;
+    height: 130vh;
+}
+.Mediterraneo .flavors {
+    position: absolute;
+    left:-50px;
+    top: 30px;
+    width: 170px;
+}
+.Mediterraneo .imgMediterraneo {
+    width:250px;
+}
+.Mediterraneo .im-shutterstock {
+    position: relative;
+    overflow: hidden;
+}
+.Mediterraneo .im-shutterstock div::before{
+    content: "";
+    position: absolute;
+    right: 7.5%;
+    bottom: 10% ;
+    width: 85%;
+    height: 80%;
+    z-index: 8;
+    border: 2px solid white;
+    transition: all ease .5s;
+}
+.Mediterraneo .im-shutterstock div:hover::before{
+    width: 100%;
+    height: 100%;
+    right: 0%;
+    bottom: 0% ;
+}
+.Mediterraneo .im-shutterstock div:hover::before + .Mediterraneo .im-shutterstock img {
+    transform: scale(1.2);
+}
+
+/* .Mediterraneo .im-shutterstock div {
+    position: absolute;
+    right: 10%;
+    bottom: 10% ;
+    background-color: none;
+    border:2px solid var(--white-color);
+    width: 80%;
+    height: 80%; 
+    transition: all ease .5s;
+}
+.Mediterraneo .im-shutterstock div:hover{
+    width:100%;
+    height:100%;
+    right: 0px;
+    bottom: 0px;
+} */
+.Mediterraneo .im-shutterstock img {
+    transition: all ease .5s;
+}
+.Mediterraneo .im-shutterstock img:hover {
+    transform: scale(1.2);
+}
+
+.Mediterraneo p {
+    font-size:1.4rem;
+    color: var(--head-color);
+    opacity: .8;
+    padding: 20px 0px;
+}
+
+.Mediterraneo button {
+    color:var(--white-color);
+    background: var(--main-color);
+    font-size: 1.2rem;
+    padding: 10px 35px;
+    border-radius:5px;
+    border:1px solid  var(--main-color);
+    background:none;
+    color: var(--main-color);
+}
+.Mediterraneo button:hover{
+    color:var(--white-color);
+    background: var(--main-color);
+}
+.Mediterraneo .some-dried {
+    width:53%;
+    position:absolute;
+    top:77vh;
+}
+/* ==========================   end Mediterraneo ==================== */
+
+
+
+
+
+
+/* =========================start The-Premium-Spice */
+
+.The-Premium-Spice {
+    background-image: url("../img/Image_7.jpg");
+    background-size: cover;
+    position: relative;
+}
+.The-Premium-Spice .details {
+    padding: 170px 0px 170px 400px ;
+}
+.The-Premium-Spice .imgA {
+    position:absolute;
+    width: 10%;
+    top: 100px;
+    right: 0px;
+
+}
+.The-Premium-Spice .imgB {
+    position:absolute;
+    width: 30%;
+    bottom: -60px;
+    left:100px;
+}
+.The-Premium-Spice .details h2 {
+    color: var(--main-color);
+    font-weight: 600;
+}
+
+.The-Premium-Spice .details p {
+    color: var(--main-color);
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+.The-Premium-Spice .details button {
+    color:var(--white-color);
+    background: var(--main-color);
+    font-size: 1.2rem;
+    padding: 7px 21px;
+    border-radius:5px;
+    border:1px solid  var(--main-color);
+    
+}
+.The-Premium-Spice .details button:hover{
+    background:none;
+    color: var(--main-color);
+}
+
+
+
+
+
+
+
+
+
+/* ========================start Know-Our-Story ============================ */
+
+.Know-Our-Story {
+    padding: 40px 0px;
+    
+}
+
+.Know-Our-Story h2 {
+    text-align: center;
+    color: var(--head-color);
+    font-weight: 600;
+    margin: 30px;
+
+}
+
+.Know-Our-Story img{
+    width: 60%;
+    margin: auto;
+}
+.Know-Our-Story h4 {
+    color: var(--head-color);
+    font-weight: 600;
+    text-align: center;
+
+}
+.Know-Our-Story p {
+    font-size: 1.1rem;
+    opacity: .5;
+    text-align: center;
+}
+.Know-Our-Story button {
+    color: var(--head-color);
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-align: center;
+    border:1px solid var(--head-color);
+    width: 140px;
+    margin-left: 100px;
+}
+.Know-Our-Story .card {
+    padding: 20px;
+    margin: 10px;
+    border-top: none;
+    height: 80vh;
+    box-shadow: 0 8px 20px 0 rgba(179, 176, 176, 0.4);
+}
+
+
+
+
+
+
+
+
+/* =========================  start Accentuate-Flavors                    */
+.Accentuate-Flavors{
+    background-image: url("../img/Image_7.jpg");
+    background-size: cover;
+    padding: 40px;
+} 
+.details-carousel-inner {
+    margin-top: 100px;
+}
+
+.Accentuate-Flavors h2 {
+    text-align: center;
+    color: var(--head-color);
+    font-weight: 600;
+}
+
+.Accentuate-Flavors h4 {
+    color: var(--head-color);
+    font-weight: 600;
+
+}
+
+.Accentuate-Flavors p {
+    font-size: 1.3rem;
+
+}
+.Accentuate-Flavors span {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+.Accentuate-Flavors button.Explore {
+    border:none;
+    border-radius: 5px ;
+    font-size: 1.3rem;
+    font-weight: 700;
+    background: var(--main-color);
+    color: var(--white-color);
+    padding:10px 30px;
+}
+.Accentuate-Flavors  .slide-left .container-img img {
+    
+   width: 350px;
+   margin: 50px auto;
+   z-index: 10;
+}
+
+.Accentuate-Flavors .slide-left{
+    position: relative;
+}
+.Accentuate-Flavors .container-img::before {
+    content: "";
+    position: absolute;
+    right: 0px;
+    bottom: -0px !important;
+    background-color: #36a88c31;
+    width: 250px;
+    height: 100%; 
+}
+
+.carousel-control-nextA {
+    border: none;
+    border-radius: 5px;
+    background: var(--white-color);
+    width: 40px;
+    height: 40px;
+    color: var(--head-color)
+}
+
+
+.pointSlide {
+    width: 15px!important;
+    height: 15px !important;
+    border-radius: 50%;
+}
+
+
+/* =========================  end Accentuate-Flavors                    */
+
+
+/* =============start From-The-Blog================= */
+.From-The-Blog{
+    position: relative;
+    padding:50px 0px;
+}
+
+
+.From-The-Blog .Group-172 {
+    position: absolute;
+    width: 15%;
+    z-index: -1;
+
+}
+.From-The-Blog .title-The-Blog {
+    text-align: center;
+    padding: 30px;
+    font-weight: 600;
+    color: var(--footer-color)
+}
+.From-The-Blog .title-The-Blog span {
+    color: #000;
+    opacity: .5;
+}
+
+
+
+
+.From-The-Blog .Best-Spices  {
+    padding:40px;
+}
+.From-The-Blog .Best-Spices h3 {
+    color:#896B49;
+}
+.From-The-Blog .Best-Spices p {
+    color:#000;
+    opacity: .5;
+    font-size: 1.4rem;
+}
+.From-The-Blog .Best-Spices span {
+    color:var(--main-color)
+}
+
+.From-The-Blog .Best-Spices div {
+    width:80px;
+    position: relative;
+}
+.From-The-Blog .Best-Spices span::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0px !important;
+    background-color: #940505;
+    width: 75%;
+    height: 2px;
+    transition: width 0.35s ease 0s;
+}
+.From-The-Blog .Best-Spices span:hover:before {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.From-The-Blog .Spotlight  {
+    padding:40px;
+}
+.From-The-Blog .Spotlight h3 {
+    color:#896B49;
+}
+.From-The-Blog .Spotlight p {
+    color:#000;
+    opacity: .5;
+    font-size: 1.4rem;
+}
+.From-The-Blog .Spotlight span {
+    color:var(--main-color)
+}
+.From-The-Blog .shutterstock {
+    transition: all 1s ease 0s;
+    overflow: hidden;
+    padding: 0 !important;
+}
+.From-The-Blog .shutterstock img{
+    padding: 0 !important;
+}
+.From-The-Blog .shutterstock img:hover {
+    transition: all 1s ease 0s;
+    transform: scale(1.08);
+}
+.From-The-Blog .Spotlight div {
+    width:80px;
+    position: relative;
+}
+.From-The-Blog .Spotlight span::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0px !important;
+    background-color: #940505;
+    width: 75%;
+    height: 2px;
+    transition: width 0.35s ease 0s;
+}
+.From-The-Blog .Spotlight span:hover:before {
+    width: 100%;
+}
+
+
+/* =============end From-The-Blog================= */
+
+
+
+
+
+
+
+
+
+/* =======================footer===================================== */
+.footerA {
+    background: var(--footer-color);
+    padding-top: 60px;
+    padding-bottom: 50px;
+}
+.footerA img {
+    width: 170px;
+}
+.footerA h5{
+    color: var(--white-color);
+}
+.footerA a {
+    color: var(--white-color);
+    text-decoration: none;
+    opacity: .5;
+    font-size: .8rem;
+}
+.footerA div {
+    position: relative;
+}
+.footerA a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0px !important;
+    background-color: #940505;
+    width: 0;
+    height: 2px;
+    transition: width 0.35s ease 0s;
+}.footerA a:hover:before {
+    width: 100%;
+}
+.footerA .Address div {
+    padding-bottom: 10px
+}
+.footerA .Address a span {
+    display: block;
+}
+.footerA .Link a {
+    line-height: 3;
+}
+.footerA .Newsletter {
+    border: 1px solid var(--white-color);
+    border-radius: 5px;
+    padding: 30px;
+    
+}
+.footerA .Newsletter p {
+    font-size: 1rem;
+    color: var(--white-color);
+    opacity: .5;
+}
+.footerA .Newsletter .Email {
+    border: 1px solid var(--white-color);
+    border-radius: 0px 5px 5px 0px;
+    padding-left: 30px;
+    background: rgba(86, 236, 199, 0.856);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.footerA .Newsletter .Email input {
+    border:none; 
+    background:none;
+    width: 80%;
+    outline: none;
+}
+.footerA .Newsletter .Email button {
+    color: var(--main-color);
+    background: var(--white-color);
+    border:none; 
+    width: 20%;
+}
+.footerB {
+    background: var(--main-color);
+    color: var(--white-dark-color);
+    padding-top: 20px;
+    
+}
+
+.footerB .container .row div  {
+ display: flex;
+ flex-direction: row;
+ flex-wrap: nowrap;
+}
+.footerB .container .row div a i {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    color: var(--white-dark-color);
+    padding-left: 5px;
+   }
+.footerB .container .row div ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-items: center;
+   }
+   .footerB .container .row div ul li {
+    list-style-type: none;
+    padding-left: 20px;
+    
+   }
+   .footerB .container .row div ul li a{
+    text-decoration: none;
+    color: var(--white-dark-color);
+    position :relative;
+    
+   }
+   .footerB .container .row div ul li a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0px !important;
+    background-color: #940505;
+    width: 0;
+    height: 2px;
+    transition: width 0.35s ease 0s;
+}.footerB .container .row div ul li a:hover:before {
+    width: 100%;
+}
+/* ======================  end footer=================== */
+/*========================  End Home   =================================*/
+
+
+/* ===================Know Our Story======================= */
+/* =======Know Our Story inner-banner =========== */
+.main_Know_Our_Story{
+    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.main_Know_Our_Story .main_sec .floating1{
+    position: absolute;
+    left:0px;
+    top :90vh;
+    width: 220px;
+}
+.main_Know_Our_Story .main_sec .floating2{
+    position: absolute;
+    right: 0px;
+    top :150vh;
+    width: 300px;
+} 
+.main_Know_Our_Story .inner-banner{
+    background: url(../img/banner.jpg);
+    background-repeat: no-repeat;
+    margin-top: 100px;
+    height: 52vh;
+    margin-left: -280px;
+    background-image: cover;
+    position: relative;
+}
+.main_Know_Our_Story .inner-banner .text {
+    position: absolute;
+    left:53%;
+    bottom:30%;
+    
+}
+.main_Know_Our_Story .inner-banner .text h1{
+    font-size: 2.2rem;
+    color: var(--white-color);
+    font-weight: 400;
+}
+
+
+.main_Know_Our_Story .sec1 div {
+    padding:40px;
+    text-align: center;
+    max-width: 900px;
+    margin:auto;
+}
+.main_Know_Our_Story .sec1 div h3{
+    padding: 10px;
+    font-size: 1.5rem;
+    color: var(--main-color)
+}
+.main_Know_Our_Story .sec1 div p {
+   margin:5px 150px ;
+   color: var(--head-color);
+   opacity: .6;
+   font-size:1.1rem;
+}
+.main_Know_Our_Story .sec2 ,.main_Know_Our_Story .sec3 ,.main_Know_Our_Story .sec4 {
+    margin: 50px 0px;
+    line-height: 1.8;
+    
+    color: var(--head-color);
+}
+.main_Know_Our_Story .sec2 p ,.main_Know_Our_Story .sec3 p ,.main_Know_Our_Story .sec4 p {
+    opacity: .6;
+    font-size:1.1rem;
+}
+.main_Know_Our_Story .sec2 img ,.main_Know_Our_Story .sec3 img , .main_Know_Our_Story .sec4 img {
+    width:54%;
+    margin: 0% 26%;
+}
+
+
+
+
+
+/* ===================end Our Story======================= */
+/* ===================================== start What_We_Offer ================================= */
+/* ==================== start What_We_Offer .inner-banner ================ */
+.What_We_Offer .inner-banner{
+    background: url(../img/banner\ \(2\).jpg);
+    background-repeat: no-repeat;
+    margin-top: 100px;
+    height: 52vh;
+    margin-left: -200px;
+    background-image: cover;
+    position: relative;
+}
+.What_We_Offer .inner-banner .text {
+    position: absolute;
+    left:52%;
+    bottom:30%;
+    
+}
+.What_We_Offer .inner-banner .text h1{
+    font-size: 2.2rem;
+    color: var(--white-color);
+    font-weight: 400;
+}
+/* ==================== end What_We_Offer .inner-banner ================ */
+/* ====================start What_We_Offer Smells-delicious ================ */
+.What_We_Offer .Smells-delicious {
+    margin-bottom: 50px;
+}
+.What_We_Offer .Smells-delicious h3 {
+    text-align: center;
+    color: var(--main-color);
+    padding:40px;
+    
+}
+.What_We_Offer .Smells-delicious .img-product{
+    background: rgba(112, 112, 112, 0.06);
+    margin: 20px 0px;
+    padding: 20px 80px;
+    position:relative;
+    height: 225px;
+    width: 150px;
+}
+.What_We_Offer .Smells-delicious .img-product img {
+    position: absolute;
+    width: 150px;
+    right: -40px;
+    bottom: -10px;
+}
+.What_We_Offer .Smells-delicious .text-product {
+    padding:0px 0px 0px 25px;
+    margin: 20px 0px;
+}
+.What_We_Offer .Smells-delicious .text-product h4 {
+    color: var(--head-color);
+    opacity: .8;
+    font-size: 1.1rem;
+}
+.What_We_Offer .Smells-delicious .text-product p {
+    color: var(--head-color);
+    opacity: .6;
+    font-size: .9rem;
+}
+.What_We_Offer .Smells-delicious .text-product button {
+   
+        border:none;
+        border-radius: 5px ;
+        font-size: 1rem;
+        font-weight: 700;
+        background: var(--main-color);
+        color: var(--white-color);
+        padding:8px 0px;
+        width: 100%;
+}
+.What_We_Offer .Smells-delicious .text-product button:hover{
+    color: var(--main-color);
+    background: var(--white-color);
+    border:1px solid  var(--main-color);
+   
+}
+/* ====================end What_We_Offer Smells-delicious ================ */
+/* ====================start What_We_Offer White_Beans ================ */
+.What_We_Offer .White_Beans{
+    background: url(../img/rice-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 70% 100%;
+
+}
+.What_We_Offer .White_Beans .img_White_Beans {
+    width: 100%;
+    height: 47vh;
+    text-align: right;
+    margin-top: 70px;
+}
+.What_We_Offer .White_Beans .img_White_Beans img {
+    width: 200px;
+}
+.What_We_Offer .White_Beans .text_White_Beans {
+    margin-top: 70px;
+}
+.What_We_Offer .White_Beans .text_White_Beans h3{
+    color: var(--head-color);
+    opacity: .8;
+    font-size: 1.6rem;
+    font-weight:600;
+    margin: 20px;
+}
+.What_We_Offer .White_Beans .text_White_Beans p{
+    color: var(--head-color);
+    opacity: .6;
+    font-size: 1.2rem;
+    margin: 20px;
+}
+.What_We_Offer .White_Beans .text_White_Beans button {
+    border:none;
+    border-radius: 5px ;
+    font-size: 1rem;
+    font-weight: 700;
+    background: var(--main-color);
+    color: var(--white-color);
+    padding:8px 0px;
+    width: 120px;
+    margin: 20px;
+}
+.What_We_Offer .White_Beans .text_White_Beans button:hover{
+    color: var(--main-color);
+    background: var(--white-color);
+    border:1px solid  var(--main-color);
+}
+/* ====================end What_We_Offer White_Beans ================ */
+/* ====================start What_We_Offer Herbs_Spices ================ */
+.What_We_Offer .Herbs_Spices{
+    height: 75vh;
+    margin-top: 30vh;
+    text-align:center;
+    position: relative;
+}
+
+.What_We_Offer .Herbs_Spices .text_Herbs h3{
+  color:var(--main-color);
+  font-size: 2rem;
+  font-weight: 800;
+}
+.What_We_Offer .Herbs_Spices .text_Herbs p{
+    color:var(--main-color);
+    padding: 10px;
+    opacity: .8;
+    font-size: 1.4rem;
+    font-weight: 400;
+    width: 700px;
+    margin: auto;
+}
+.What_We_Offer .Herbs_Spices .text_Herbs  button {
+    border:none;
+    border-radius: 5px ;
+    font-size: 1rem;
+    font-weight: 700;
+    background: var(--main-color);
+    color: var(--white-color);
+    padding:8px 0px;
+    width: 120px;
+    position: absolute;
+}
+.What_We_Offer .Herbs_Spices .text_Herbs button:hover{
+    color: var(--main-color);
+    background: var(--white-color);
+    border:1px solid  var(--main-color);
+}
+.What_We_Offer .Herbs_Spices .img_Herbs {
+   max-width: 100%;
+   text-align: center;
+}
+.What_We_Offer .Herbs_Spices .img_Herbs img{
+    max-width: 800px;
+}
+/* ====================endWhat_We_Offer Herbs_Spices ================ */
+/* ================================= end What_We_Offer ================================= */
+/* ================================== start Lets Cook =================================== */
+/* ===================== start Lets Cook inner-banner ==================== */
+.Lets_Cook .inner-banner{
+    background: url(../img/banner\ \(1\).jpg);
+    background-repeat: no-repeat;
+    margin-top: 100px;
+    height: 52vh;
+    margin-left: -280px;
+    background-image: cover;
+    position: relative;
+}
+.Lets_Cook .inner-banner .text {
+    position: absolute;
+    left:52%;
+    bottom:30%;
+    
+}
+.Lets_Cook .inner-banner .text h1{
+    font-size: 2.2rem;
+    color: var(--white-color);
+    font-weight: 400;
+}
+/* ===================== end Lets Cook inner-banner ==================== */
+/* ===================== start Lets Cook Lets_Cook-main ==================== */
+
+.Lets_Cook .Lets_Cook-main {
+    margin: 100px 0px 50px;
+}
+.Lets_Cook-main {
+    position: relative;
+}
+.Lets_Cook-main-img-floating{
+    position: absolute;
+    top:-100px;
+    right: 0px;
+    margin-right:-20px ;
+    width: 300px;
+    z-index: 1;
+}
+
+.Lets_Cook .card_food {
+    margin:10px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px 2px rgb(179, 173, 173);
+    background:var(--white-color);
+    position:relative;
+    z-index: 5;
+}
+.Lets_Cook a {
+    text-decoration: none;
+}
+.Lets_Cook .card_food div h4{
+    color: var(--head-color);
+    padding: 30px;
+    font-weight: 700;
+}
+.Lets_Cook .card_food .s-food {
+    position:absolute;
+    width: 70px;
+    bottom: 10px;
+    right: 30px;
+}
+/* ===================== end Lets Cook Lets_Cook-main ==================== */
+
+/* ================================== end Lets Cook =================================== */
+
+/* =================================== start News & Media================================== */
+/* ============= start News & Media inner-banner================== */
+.News_Media .inner-banner{
+    background: url(../img/banner\ \(3\).jpg);
+    background-repeat: no-repeat;
+    margin-top: 100px;
+    height: 52vh;
+    background-image:no-repeat;
+    margin-left: -280px;
+    position: relative;
+}
+.News_Media .inner-banner .text {
+    position: absolute;
+    left:53%;
+    bottom:30%;
+    
+}
+.News_Media .inner-banner .text h1{
+    font-size: 2.2rem;
+    color: var(--white-color);
+    font-weight: 400;
+}
+/* ================= end News & Media inner-banner=========== */
+
+/* =====start News & Media Best_Spices_fo_Smoothies ========== */
+.News_Media .Best_Spices_fo_Smoothies {
+    margin: 50px 0px ;
+    position:relative;
+}
+.News_Media .Best_Spices_fo_Smoothies .floating-imgB{
+    position: absolute;
+    right: 0;
+    top: 15px;
+    width: 250px;
+}
+.News_Media .Best_Spices_fo_Smoothies .top-news img {
+    width:100%
+}
+.News_Media .Best_Spices_fo_Smoothies .top-news p {
+    color: var(--main-color);
+    font-weight: 400;
+}
+.News_Media .Best_Spices_fo_Smoothies .text_Smoothies h3{
+    color:var(--head-color);
+    font-weight: 700;
+}
+.News_Media .Best_Spices_fo_Smoothies .text_Smoothies p {
+    font-size: 1.2rem;
+    opacity:.8;
+}
+/* ===== end  News & Media Best_Spices_fo_Smoothies ========== */
+/* =====start News & Media Delight_Your_Taste_Buds ========== */
+.News_Media .Delight_Your_Taste_Buds h3{
+    color:var(--head-color);
+    font-weight: 700;
+}
+.News_Media .Delight_Your_Taste_Buds .img_Delight img{
+    width:100%
+}
+.News_Media .Delight_Your_Taste_Buds .img_Delight p{
+    color: var(--main-color);
+    font-weight: 400;
+}
+.News_Media .Delight_Your_Taste_Buds .text_Delight h4 {
+    color: var(--head-color);
+    font-size: 1.3rem;
+    font-weight:700;
+    
+}
+.News_Media .Delight_Your_Taste_Buds .text_Delight p {
+    opacity: .8;
+    font-size: .9rem;
+}
+.News_Media .Delight_Your_Taste_Buds .text_Delight span {
+    display: block;
+    color: var(--main-color);
+    font-weight: 400;
+}
+/* =====end News & Media Delight_Your_Taste_Buds ========== */
+
+
+
+/* =================================== end News & Media================================== */
+
+
+/* =================================== start Contact US================================== */
+
+/* =====================start Contact_Us inner-banner =================================== */
+.Contact_Us .inner-banner{
+    background: url(../img/banner\ \(4\).jpg);
+    background-repeat: no-repeat;
+    margin-top: 100px;
+    height: 52vh;
+    margin-left: -280px;;
+    margin-bottom: 0px;
+    background-image: cover;
+    position: relative;
+}
+.Contact_Us .inner-banner .text {
+    position: absolute;
+    left:53%;
+    bottom:30%;
+    
+}
+.Contact_Us .inner-banner .text h1{
+    font-size: 2.2rem;
+    color: var(--white-color);
+    font-weight: 400;
+}
+
+
+/* ===================== end  Contact_Us inner-banner =================================== */
+/* =====================start Contact_Us information =================================== */
+/* email */
+.Contact_Us_email {
+    border: 1px solid rgb(168, 163, 163);
+    text-align: center;
+    padding: 60px 0px;
+    margin-top: 60px;
+}
+.Contact_Us_email i{
+    color: var(--head-color);
+    font-size: 1.6rem;
+}
+.Contact_Us_email span {
+    font-size: 1.3rem;
+    margin-left: 10px;
+    font-weight: 600;
+}
+.Contact_Us_email a {
+    font-size: 1.2rem;
+    color: #000;
+    opacity: .6;
+    text-decoration: none;
+}
+/* phone */
+
+.Contact_Us_phone {
+    border: 1px solid rgb(168, 163, 163);
+    text-align: center;
+    padding: 60px 0px;
+    margin-top: 60px;
+}
+.Contact_Us_phone i{
+    color: var(--head-color);
+    font-size: 1.6rem;
+}
+.Contact_Us_phone span {
+    font-size: 1.3rem;
+    margin-left: 10px;
+    font-weight: 600;
+}
+.Contact_Us_phone a {
+    font-size: 1.2rem;
+    color: #000;
+    opacity: .6;
+    text-decoration: none;
+}
+
+/* location */
+.Contact_Us_location {
+    border: 1px solid rgb(168, 163, 163);
+    background: var(--white-color);
+    z-index: 6;
+    text-align: center;
+    padding: 60px 0px;
+    margin-top: 60px;
+}
+.Contact_Us_location i{
+    color: var(--head-color);
+    font-size: 1.6rem;
+}
+.Contact_Us_location span {
+    font-size: 1.3rem;
+    margin-left: 10px;
+    font-weight: 600;
+}
+.Contact_Us_location a {
+    font-size: 1.2rem;
+    color: #000;
+    opacity: .6;
+    text-decoration: none;
+}
+
+/* =====================end Contact_Us information =================================== */
+/* ======================start map and form in Get_In_Touch ======================== */
+/* bg-img */
+.Get_In_TouchA1 {
+    margin: 50px 0px;
+    position:relative;
+}
+.floating-img {
+    position:absolute;
+    height: 60vh;
+    right: 0;
+    top:-50vh;
+    z-index: -1;
+}
+/* form */
+.Get_In_TouchA3 h3 {
+    color: var(--head-color);
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight:500;
+}
+.Get_In_TouchA3 form label {
+    font-size:18px;
+    margin-top: 10px;
+}
+.Get_In_TouchA3 form input {
+    height: 40px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border:1px solid  rgb(187, 180, 180);
+    outline:none;
+}
+.Get_In_TouchA3 form textarea {
+    padding-left: 10px;
+    border-radius: 5px;
+    border:1px solid  rgb(187, 180, 180);
+    outline:none;
+}
+.Get_In_TouchA3 .submit {
+   padding:10px 40px ;
+   height: 50px;
+   font-size: 1.3rem;
+   margin-top: 20px;
+   color: var(--white-color);
+   background: var(--main-color);
+   border: none;
+}
+.Get_In_TouchA3 .submit:hover {
+    color: var(--main-color);
+   background: var(--white-color);
+   border: 1px solid var(--main-color);
+}
+/* ====================== end map and form in Get_In_Touch ======================== */
+/* ===================================end Contact US================================== */
