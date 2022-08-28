@@ -13,7 +13,5 @@ header_home = ()=>{
 let i=1;
 main_carousel_button_bottom = () => {
     let carouselExampleCaptions= document.getElementById("carouselExampleCaptions")
-    for (;i<3;i++){
-        carouselExampleCaptions.scrollto(200,400);
-    }
+    console.log(scrollY)
 }
