@@ -45,29 +45,38 @@ header {
 /* ========================  Start Navbar   =========================== */
 
 .navbar-toggler {
-    width: 150px;
+    width: 100px;
     border:none;
-
-    height: 150px;
+    height: 100px;
+    outline:none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content:space-between;
+    
 }
 .navbar-toggler img {
     width:100%;
 }
 nav ul {
     
-    width: 80%;
+    width: 90%;
     margin: auto;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content:space-around;
     align-items: center;
-    font-size: 1.2rem;
     font-weight: 400;
 
 }
 nav ul li {
     position: relative;
+
+}
+nav ul li a {
+    font-size:1.2rem;
 }
 nav ul li .active{
    color: var(--main-color) !important;
@@ -99,7 +108,7 @@ nav ul li a span:hover{
 }
 
 nav ul li a img {
-    width: 80px !important;
+    width: 80px;
 }
 .header_home{
     background-image: none;
@@ -107,8 +116,49 @@ nav ul li a img {
     box-shadow: 0 0 0 0 ;
 }
 .header_home nav ul li a img {
-    width: 170px !important;
+    width: 170px;
 }
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 700px) {
+    nav ul li a img {
+        display: none !important;
+    }
+}
+@media only screen and (min-width: 700px) {
+    .header_home nav ul li a img {
+        width: 100px;
+    }
+    nav ul li a {
+        font-size:1rem;
+    }
+    nav ul li a img {
+        display: none !important;
+    }
+   
+  }
+  
+  @media only screen and (min-width: 1000px) {
+    nav ul li a img {
+        display: block !important;
+    }
+    .header_home nav ul li a img {
+        width: 110px;
+    }
+    nav ul li a {
+        font-size:1.1rem;
+    }
+  }
+  @media only screen and (min-width: 1300px) {
+    nav ul li a img {
+        display: block !important;
+    }
+    .header_home nav ul li a img {
+        width: 160px;
+    }
+    nav ul li a {
+        font-size:1.2rem;
+    }
+  }
 /* ========================   End Navbar   =========================== */
 
 /* ========================   Start Main =========================*/
@@ -116,6 +166,7 @@ nav ul li a img {
 
 
 .main_carousel {
+    scroll-behavior: smooth;
     overflow: hidden;
     height: 95vh;
     position: relative;
@@ -175,6 +226,64 @@ nav ul li a img {
     background:none;
   }
   
+  /* Extra small devices (phones, 600px and down) */
+
+@media only screen and (max-width: 700px) {
+    .main_carousel_button_top{
+        top:20vh;
+        right: 30px;
+        font-size:20px;
+        padding: 5px;
+    }
+    .main_carousel_button_bottom{
+        top:25vh;
+        right: 30px;
+        font-size:20px;
+        padding: 5px;
+    }
+    
+    .textBannerA h2 ,.textBannerB h2 ,.textBannerC h2 {
+        font-size: 1.4rem !important;
+        font-weight: 400 !important;
+      }
+      .textBannerA ,.textBannerB ,.textBannerC {
+        top:100px;
+        left:20px;
+      }
+      .imgBannerA img ,.imgBannerB img ,.imgBannerC img ,.main_carousel {
+        height: 50vh;
+      }
+  }
+@media only screen and (min-width: 700px) {
+    .textBannerA h2 ,.textBannerB h2 ,.textBannerC h2 {
+        font-size: 2.1rem !important;
+        font-weight: 600 !important;
+      }
+      .imgBannerA img ,.imgBannerB img ,.imgBannerC img ,.main_carousel{
+        height: 80vh;
+      }
+  }
+  @media only screen and (min-width: 1100px) {
+    .textBannerA h2 ,.textBannerB h2 ,.textBannerC h2 {
+        font-size: 2.2rem !important;
+        font-weight: 600 !important;
+      }
+      .imgBannerA img ,.imgBannerB img ,.imgBannerC img ,.main_carousel{
+        height: 85vh;
+      }
+  }
+  @media only screen and (min-width: 1300px) {
+    .textBannerA h2 ,.textBannerB h2 ,.textBannerC h2 {
+        font-size: 2.5rem !important;
+        font-weight: 800 !important;
+        
+      }
+      .imgBannerA img ,.imgBannerB img ,.imgBannerC img ,.main_carousel{
+        height: 90vh;
+      }
+    
+  }
+
 /* ========================   end Main ==============================*/
 
 
@@ -185,10 +294,13 @@ nav ul li a img {
     z-index: 50px;
     margin-left: 48%;
   }
+.some-dried-herbs {
+    display:none !important;
+}
 .Mediterraneo {
     position: relative;
-    padding: 100px 0px;
-    height: 130vh;
+    padding-bottom: 150px;
+    padding-top: 50px;
 }
 .Mediterraneo .flavors {
     position: absolute;
@@ -271,8 +383,83 @@ nav ul li a img {
 .Mediterraneo .some-dried {
     width:53%;
     position:absolute;
-    top:77vh;
+    bottom: 50px;
 }
+
+ /* Extra small devices (phones, 600px and down) */
+
+ @media only screen and (max-width: 800px) {
+    .Mediterraneo .imgMediterraneo {
+        width:170px;
+        margin-top: 10px;
+    }
+    .scroll {
+        top: -25px;
+        width: 30px;
+        height: 50px;
+    }
+    .some-dried-herbs{
+        display: block !important;
+    }
+    .Mediterraneo .some-dried{
+        display: none!important;
+    }
+    .Mediterraneo p {
+        font-size:1rem;
+    }
+    .Mediterraneo button{
+        font-size: 1rem;
+        padding: 5px 25px;
+        margin-bottom: 20px;
+    }
+  }
+  
+@media only screen and (min-width: 800px) {
+    .Mediterraneo .imgMediterraneo {
+        width:175px;
+    }
+    .scroll {
+        top: -30px;
+        width: 35px;
+        height: 55px;
+    }
+    .Mediterraneo p {
+        font-size:1.1rem;
+    }
+    .Mediterraneo .some-dried{
+        display: none!important;
+    }
+   
+  }
+  @media only screen and (min-width: 1100px) {
+    
+    .Mediterraneo .imgMediterraneo {
+        width:200px;
+    }
+    .Mediterraneo p {
+        font-size:1.2rem;
+    }
+    .Mediterraneo button{
+        font-size: 1.1rem;
+        padding: 5px 30px;
+        margin-bottom: 20px;
+    }
+    .Mediterraneo .some-dried{
+        display: block!important;
+    }
+   
+  }
+  @media only screen and (min-width: 1300px) {
+    .Mediterraneo .imgMediterraneo {
+        width:225px;
+    }
+    .Mediterraneo p {
+        font-size:1.3rem;
+    }
+    
+    
+  }
+
 /* ==========================   end Mediterraneo ==================== */
 
 
@@ -288,7 +475,7 @@ nav ul li a img {
     position: relative;
 }
 .The-Premium-Spice .details {
-    padding: 170px 0px 170px 400px ;
+    padding: 170px 0px 170px 450px ;
 }
 .The-Premium-Spice .imgA {
     position:absolute;
@@ -299,9 +486,9 @@ nav ul li a img {
 }
 .The-Premium-Spice .imgB {
     position:absolute;
-    width: 30%;
+    width: 400px;
     bottom: -60px;
-    left:100px;
+    left:200px;
 }
 .The-Premium-Spice .details h2 {
     color: var(--main-color);
@@ -335,10 +522,113 @@ nav ul li a img {
 
 
 
+ /* Extra small devices (phones, 600px and down) */
+
+ @media only screen and (max-width: 700px) {
+    .The-Premium-Spice .details {
+        padding: 100px 0px 100px 0px ;
+    }
+    .The-Premium-Spice .imgB {
+        position:absolute;
+        width: 200px;
+        bottom: -40px;
+        left:0px;
+    }
+    .The-Premium-Spice .details h2 {
+        font-size: 1.2rem;
+         font-weight: 500;
+     }
+     
+     .The-Premium-Spice .details p {
+         font-weight: 400;
+         font-size: 1.1rem;
+     }
+     .The-Premium-Spice .details button {
+         font-size: 1rem;
+         padding: 5px 15px;
+     }
+    
+  }
+@media only screen and (min-width: 700px) {
+    .The-Premium-Spice .details {
+        padding: 130px 0px 130px 150px ;
+    }
+    .The-Premium-Spice .imgB {
+        position:absolute;
+        width: 250px;
+        bottom: -40px;
+        left:20px;
+    }
+    .The-Premium-Spice .details h2 {
+        font-size: 1.2rem;
+         font-weight: 500;
+     }
+     
+     .The-Premium-Spice .details p {
+         font-weight: 400;
+         font-size: 1.1rem;
+     }
+     .The-Premium-Spice .details button {
+         font-size: 1rem;
+         padding: 5px 15px;
+     }
+   
+  }
+  @media only screen and (min-width: 1100px) {
+    .The-Premium-Spice .details {
+        padding: 150px 0px 150px 250px ;
+    }
+    .The-Premium-Spice .imgB {
+        position:absolute;
+        width: 300px;
+        bottom: -40px;
+        left:30px;
+    }
+    .The-Premium-Spice .details h2 {
+        font-size: 1.4rem;
+         font-weight: 500;
+     }
+     
+     .The-Premium-Spice .details p {
+         font-weight: 400;
+         font-size: 1.2rem;
+     }
+     .The-Premium-Spice .details button {
+         font-size: 1.1rem;
+         padding: 7px 21px;
+     }
+   
+  }
+  @media only screen and (min-width: 1300px) {
+    .The-Premium-Spice .details {
+        padding: 160px 0px 160px 300px ;
+    }
+    .The-Premium-Spice .imgB {
+        position:absolute;
+        width: 330px;
+        bottom: -40px;
+        left:200px;
+    }
+    .The-Premium-Spice .details h2 {
+       font-size: 1.6rem;
+        font-weight: 500;
+    }
+    
+    .The-Premium-Spice .details p {
+        font-weight: 400;
+        font-size: 1.3rem;
+    }
+    .The-Premium-Spice .details button {
+        font-size: 1.1rem;
+        padding: 7px 21px;
+    }
+    
+    
+  }
 /* ========================start Know-Our-Story ============================ */
 
 .Know-Our-Story {
-    padding: 40px 0px;
+    padding: 40px 0px 50px;
     
 }
 
@@ -372,20 +662,39 @@ nav ul li a img {
     text-align: center;
     border:1px solid var(--head-color);
     width: 140px;
-    margin-left: 100px;
+    margin-left: 30%;
 }
 .Know-Our-Story .card {
     padding: 20px;
     margin: 10px;
     border-top: none;
     height: 80vh;
-    box-shadow: 0 8px 20px 0 rgba(179, 176, 176, 0.4);
+    box-shadow: 0 8px 20px 0 rgba(202, 199, 199, 0.4);
 }
 
 
 
 
 
+@media only screen and (max-width: 700px) {
+    .Know-Our-Story h4 {
+        color: var(--head-color);
+        font-weight: 500;
+        font-size: 1rem;
+    }
+    .Know-Our-Story p {
+        font-size: .9rem;
+    }
+    .Know-Our-Story button {
+        color: var(--head-color);
+        font-weight: 400;
+        font-size: 1.1rem;
+        
+        margin-left: 30%;
+    }
+    
+    
+}
 
 
 
@@ -394,6 +703,7 @@ nav ul li a img {
     background-image: url("../img/Image_7.jpg");
     background-size: cover;
     padding: 40px;
+    z-index: -10;
 } 
 .details-carousel-inner {
     margin-top: 100px;
@@ -429,16 +739,23 @@ nav ul li a img {
     padding:10px 30px;
 }
 .Accentuate-Flavors  .slide-left .container-img img {
-    
+   position: absolute;
    width: 350px;
-   margin: 50px auto;
-   z-index: 10;
+   left: -150px;
+   z-index: 99;
 }
-
+.Accentuate-Flavors  .slide-left .container-img{
+    z-index: 5;
+    width: 250px;
+    height: 100%; 
+    margin-left: 150px;
+    position: relative;
+    background-color: #36a88c31;
+}
 .Accentuate-Flavors .slide-left{
     position: relative;
 }
-.Accentuate-Flavors .container-img::before {
+/* .Accentuate-Flavors .container-img::before {
     content: "";
     position: absolute;
     right: 0px;
@@ -446,7 +763,8 @@ nav ul li a img {
     background-color: #36a88c31;
     width: 250px;
     height: 100%; 
-}
+    z-index: -1;
+} */
 
 .carousel-control-nextA {
     border: none;
@@ -463,6 +781,114 @@ nav ul li a img {
     height: 15px !important;
     border-radius: 50%;
 }
+
+.slide-left-top {
+    display: none !important;
+}
+.slide-left-top .container-img{
+    background-color: #36a88c31;
+    padding: 40px;
+    height: 95%;
+}
+.slide-left-top .container-img img {
+    width: 300px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+
+@media only screen and (max-width: 800px) {
+    .slide-left-top {
+        display: block !important;
+    }
+    .slide-left {
+        display: none !important;
+    }
+    
+    .Accentuate-Flavors h2 {
+        font-weight: 600;
+        font-size: 1.3rem;
+    }
+
+    .Accentuate-Flavors h4 {
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+
+    .Accentuate-Flavors p {
+        font-size: .9rem;
+
+    }
+    .Accentuate-Flavors span {
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+    .Accentuate-Flavors button.Explore {
+       
+        font-size: 1.1rem;
+        font-weight: 500;
+        padding:5px 20px;
+        margin-bottom: 20px;
+    }
+    
+}
+@media only screen and (min-width: 800px) {
+    
+    .Accentuate-Flavors h2 {
+        font-weight: 600;
+        font-size: 1.4rem;
+    }
+
+    .Accentuate-Flavors h4 {
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    .Accentuate-Flavors p {
+        font-size: 1rem;
+
+    }
+    .Accentuate-Flavors span {
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+    .Accentuate-Flavors button.Explore {
+       
+        font-size: 1.2rem;
+        font-weight: 500;
+        padding:5px 20px;
+        margin-bottom: 20px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    
+    .Accentuate-Flavors h2 {
+        font-weight: 700;
+        font-size: 1.6rem;
+    }
+
+    .Accentuate-Flavors h4 {
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+
+    .Accentuate-Flavors p {
+        font-size: 1rem;
+
+    }
+    .Accentuate-Flavors span {
+        font-size: 1.4rem;
+        font-weight: 700;
+    }
+    .Accentuate-Flavors button.Explore {
+       
+        font-size: 1.4rem;
+        font-weight: 500;
+        padding:5px 20px;
+        margin-bottom: 20px;
+    }
+}
+
+
 
 
 /* =========================  end Accentuate-Flavors                    */
@@ -587,6 +1013,18 @@ nav ul li a img {
 }
 
 
+
+@media only screen and (max-width: 800px) {
+    .From-The-Blog .Best-Spices ,.From-The-Blog .Spotlight  {
+        padding:20px;
+    }
+    .From-The-Blog .Best-Spices h3 ,.From-The-Blog .Spotlight h3 {
+        font-size: 1.3rem;
+    }
+    .From-The-Blog .Best-Spices p , .From-The-Blog .Spotlight p {
+        font-size: 1.1rem;
+    }
+}
 /* =============end From-The-Blog================= */
 
 
@@ -602,6 +1040,7 @@ nav ul li a img {
     background: var(--footer-color);
     padding-top: 60px;
     padding-bottom: 50px;
+    text-align: center;
 }
 .footerA img {
     width: 170px;
@@ -722,6 +1161,39 @@ nav ul li a img {
 }.footerB .container .row div ul li a:hover:before {
     width: 100%;
 }
+
+
+
+
+
+
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    
+  }
+  
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    
+  }
+  
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    
+  } 
+  
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    
+  } 
+  
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    
+  }
 /* ======================  end footer=================== */
 /*========================  End Home   =================================*/
 
@@ -767,7 +1239,7 @@ nav ul li a img {
 
 
 .main_Know_Our_Story .sec1 div {
-    padding:40px;
+    padding:40px 20px;
     text-align: center;
     max-width: 900px;
     margin:auto;
@@ -778,7 +1250,9 @@ nav ul li a img {
     color: var(--main-color)
 }
 .main_Know_Our_Story .sec1 div p {
-   margin:5px 150px ;
+   /* margin:5px 150px ; */
+   max-width:600px;
+   margin:auto;
    color: var(--head-color);
    opacity: .6;
    font-size:1.1rem;
@@ -798,7 +1272,32 @@ nav ul li a img {
     margin: 0% 26%;
 }
 
-
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 800px) {
+    .main_Know_Our_Story .main_sec .floating1{
+        display: none !important;
+    }
+    .main_Know_Our_Story .main_sec .floating2{
+        display: none !important;
+    } 
+    .main_Know_Our_Story .inner-banner .text h1{
+        font-size: 1.7rem;
+    }
+    
+    
+    .main_Know_Our_Story .sec1 div h3{
+        font-size: 1.1rem;
+    }
+    .main_Know_Our_Story .sec1 div p {
+       /* margin:5px 150px ; */
+       font-size:.9rem;
+    }
+    
+    .main_Know_Our_Story .sec2 p ,.main_Know_Our_Story .sec3 p ,.main_Know_Our_Story .sec4 p {
+        font-size:.9rem;
+    }
+    
+}
 
 
 
@@ -839,14 +1338,14 @@ nav ul li a img {
 .What_We_Offer .Smells-delicious .img-product{
     background: rgba(112, 112, 112, 0.06);
     margin: 20px 0px;
-    padding: 20px 80px;
+    padding: 20px 40px;
     position:relative;
     height: 225px;
-    width: 150px;
+    width: 130px;
 }
 .What_We_Offer .Smells-delicious .img-product img {
     position: absolute;
-    width: 150px;
+    max-width: 150px;
     right: -40px;
     bottom: -10px;
 }
@@ -885,6 +1384,7 @@ nav ul li a img {
 /* ====================start What_We_Offer White_Beans ================ */
 .What_We_Offer .White_Beans{
     background: url(../img/rice-bg.jpg);
+    background-image: cover;
     background-repeat: no-repeat;
     background-size: 70% 100%;
 
@@ -930,11 +1430,40 @@ nav ul li a img {
     background: var(--white-color);
     border:1px solid  var(--main-color);
 }
+@media only screen and (max-width: 800px) {
+    .What_We_Offer .White_Beans{
+       
+        background-size: 100% 100%;
+    
+    }
+    .What_We_Offer .White_Beans .img_White_Beans {
+        height: 30vh;
+        text-align: center;
+        margin-top: 40px;
+    }
+    .What_We_Offer .White_Beans .img_White_Beans img {
+        width: 150px;
+    }
+    .What_We_Offer .White_Beans .text_White_Beans h3{
+      
+        font-size: 1.3rem;
+        font-weight:500;
+    }
+    .What_We_Offer .White_Beans .text_White_Beans p{
+        font-size: 1rem;
+    }
+    .What_We_Offer .White_Beans .text_White_Beans button {
+        font-size: .9rem;
+        font-weight: 600;
+        padding:8px 0px;
+        width: 100px;
+        margin: 20px;
+    }
+}
 /* ====================end What_We_Offer White_Beans ================ */
 /* ====================start What_We_Offer Herbs_Spices ================ */
 .What_We_Offer .Herbs_Spices{
-    height: 75vh;
-    margin-top: 30vh;
+    padding: 100px 0px;
     text-align:center;
     position: relative;
 }
@@ -950,7 +1479,7 @@ nav ul li a img {
     opacity: .8;
     font-size: 1.4rem;
     font-weight: 400;
-    width: 700px;
+    max-width: 700px;
     margin: auto;
 }
 .What_We_Offer .Herbs_Spices .text_Herbs  button {
@@ -962,7 +1491,6 @@ nav ul li a img {
     color: var(--white-color);
     padding:8px 0px;
     width: 120px;
-    position: absolute;
 }
 .What_We_Offer .Herbs_Spices .text_Herbs button:hover{
     color: var(--main-color);
@@ -970,11 +1498,29 @@ nav ul li a img {
     border:1px solid  var(--main-color);
 }
 .What_We_Offer .Herbs_Spices .img_Herbs {
-   max-width: 100%;
    text-align: center;
 }
 .What_We_Offer .Herbs_Spices .img_Herbs img{
-    max-width: 800px;
+    width: 80%;
+    margin: auto;
+}
+@media only screen and (max-width: 800px) {
+    .What_We_Offer .Herbs_Spices .text_Herbs h3{
+        
+        font-size: 1.8rem;
+        font-weight: 700;
+      }
+      .What_We_Offer .Herbs_Spices .text_Herbs p{
+        
+        font-size: 1.1rem;
+      }
+      .What_We_Offer .Herbs_Spices .text_Herbs  button {
+        font-size: .9rem;
+        font-weight: 600;
+        padding:8px 0px;
+        width: 100px;
+      }
+   
 }
 /* ====================endWhat_We_Offer Herbs_Spices ================ */
 /* ================================= end What_We_Offer ================================= */
